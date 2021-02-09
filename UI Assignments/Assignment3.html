@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/JavaScript">
+
+            function add()  {
+                var firstNumber=document.getElementById("fn").value;
+                var secondNumber=document.getElementById("sn").value;
+                
+                document.getElementById("e1").innerHTML="";
+                var sum=eval(firstNumber)+eval(secondNumber);
+                document.getElementById("rs").value=sum;
+                return true;
+            }
+
+            function sub() {
+                var firstNumber=document.getElementById("fn").value;
+                var secondNumber=document.getElementById("sn").value;
+
+                document.getElementById("e2").innerHTML="";
+                var sub=eval(firstNumber)-eval(secondNumber);
+                document.getElementById("rs").value=sub;
+                return true;
+            }
+
+            function Clear() {
+                document.getElementById("fn").value="";
+                document.getElementById("sn").value="";
+            }
+    </script>
+</head>
+<body>
+    
+    <h2 style="color: brown;"><b>Online Calculator</b></h2>
+    <label for=""><b>First Number</b></label>
+      <input type="text" name="firstnum" id="fn" ><span id="e1"></span><br/><br/>
+
+    <label for=""><b>Second Number</b></label>
+    <input type="text" name="secondnum" id="sn"><span id="e2"></span><br><br/>
+
+    <label><b>Result</b></label>
+    <input type="text" name="result" id="rs"><br/><br/>
+
+    <input type="submit" value="Add"  style=" margin-left: 20px; background-color:burlywood;"  onclick="add()">
+    <input type="submit" value="Sub" style="background-color:burlywood;" onclick="sub()">
+
+    <input type="reset" value="clear" style="background-color:burlywood;" onclick="Clear()">
+</body>
+</html>
